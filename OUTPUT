@@ -1,0 +1,10 @@
+{
+  "valid": true,
+  "data_file": "data.csv",
+  "specs_file": "dataspec.json",
+  "errors": [],
+  "stats": {
+    "total_rows": 34,
+    "error_count": 0
+  }
+}

@@ -1,0 +1,935 @@
+{
+  "format": "csv",
+  "delimiter": ",",
+  "has_headers": true,
+  "columns": [
+    {
+      "name": "INDIVIDUAL_CORPORATE_TYPE",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ENTITY_TYPE",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ENTITY_TYPE_DESC",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "STATUS_CODE",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PARTY_NAME",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "NAME_TITLE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "FIRST_NAME",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MIDDLE_NAME",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "LAST_NAMES",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PREVIOUS_NAME",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ABBREVIATED_NAME",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_ALIASES",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "DATE_OF_BIRTH_OR_INCORPORATION",
+      "type": "timestamp",
+      "required": true,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "CUSTOMER_ID_NO",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_ID_TYPE",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_ID_COUNTRY",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ID_EXPIRY_DATE",
+      "type": "timestamp",
+      "required": false,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "REGISTERED_NUMBER",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CITIZENSHIP_COUNTRY",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "DOMICILE_COUNTRY",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "RESIDENCE_OPERATION_COUNTRY",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "BIRTH_INCORPORATION_COUNTRY",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "COUNTRY_OF_ORIGIN",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PLACE_OF_BIRTH",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "RESIDENTIAL_ADDRESS",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ADDRESS1",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ADDRESS2",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ADDRESS3",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "POSTAL_CODE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "COMPANY_FORM",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ZONE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "GENDER",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "RACE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "DECEASED_DATE",
+      "type": "timestamp",
+      "required": false,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "DECEASED_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "MARITAL_STATUS",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "BUSINESS_PROFESSION",
+      "type": "string ",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_SEGMENT_CODE",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_SEGMENT_NAME",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PARTY_SEGMENT",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "BUSINESS_TYPE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "NATURE_OF_BUSINESS",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "OCCUPATION",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "EMPLOYMENT_STATUS",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "EMPLOYEE_TYPE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "EMPLOYER_NAME",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "INFO_TYPE_VALUE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_CONTACT_NO",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MAJOR_BUYER",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MAJOR_SELLER",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MAJOR_BUYER_CTRY",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MAJOR_SUPPLIER_CTRY",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MAJOR_BUYER_INDUSTRY_CD",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MAJOR_SUPPLIER_INDUSTRY_CD",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "RELATIONSHIP_MGR_ID",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_DIVISION",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CUSTOMER_ORGUNIT_CODE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "OVERALL_SCORE_ADJUSTMENT",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "RISK_SCORE",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "RISK_LEVEL",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "ALERT_INFO_RSN",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PEP_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "PEP_NOT_ON_WATCHLIST",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PEP_BY_ACCOUNT_ASSOCIATION",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "EMPLOYEE_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "FOREIGN_FINANCIAL_ORG_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "FOREIGN_OFFICIAL_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "NON_PHYSICAL_ADDRESS_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "RESIDENCE_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "SPECIAL_ATTENTION_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "INCORPORATE_TAXHAVEN_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "BANKRUPT_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "NEAR_BORDER_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "ADVERSE_NEWS_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "WEAK_AML_CTRL_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "CASH_INTENSIVE_BUSINESS_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "CORRESPONDENT_BANK_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "MONEY_SERVICE_BUREAU_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "NON_BANK_FINANCE_INSTITUTE_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "WHOLESALE_BANKNOTE_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "COMPENSATION_REQD_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "COMPLAINT_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "END_RELATIONSHIP_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "FACE_TO_FACE_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "NGO_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "HIGH_RISK_COUNTRY_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "ACQUISITION_DATE",
+      "type": "timestamp",
+      "required": false,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "BALANCE_SHEET_TOTAL",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "ANNUAL_TURNOVER",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "TRADING_DURATION",
+      "type": "int",
+      "required": false
+    },
+    {
+      "name": "PRIME_BRANCH_ID",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "MERCHANT_NUMBER",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "CHANNEL",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "INTENDED_PRODUCT_USE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "COMPLEX_STRUCTURE",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "DORMANT_OVERRIDE_DATE",
+      "type": "timestamp",
+      "required": false,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "CUSTOMER_UNIQUENESS_SCORE",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "DESIGNATION",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PARTY_CORPORATE_STRUCTURE",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "COUNTRY_OF_JURISDICTION",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "SOURCE_OF_FUNDS",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "NATURE_OF_BUSINESS_RELATION",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "INDUSTRY_SECTOR",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "INDUSTRY_RISK",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "ANNUAL_REVENUE_OR_INCOME",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "MONTHLY_REVENUE_OR_INCOME",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "BUREAU_SCORE",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "COUNTRY_OF_FINANCIAL_INTEREST",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "HIGH_NET_WORTH_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "CRIMINAL_OFFENCE_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "PURPOSE_OF_ACCOUNT_OPENING",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PRODUCT_RISK",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "FIRST_TIME_BUSINESS_RELATIONSHIP",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "BUSINESS_REGISTRATION_DOCUMENT_EXPIRY_DATE",
+      "type": "timestamp",
+      "required": false,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "COPY_OF_BUSINESS_REGISTRATION_DOCUMENT",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "SHAREHOLDING_STRUCTURE_INFO_COMPLETION",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "SHAREHOLDING_STRUCTURE_LAYER",
+      "type": "int",
+      "required": false
+    },
+    {
+      "name": "BENEFICIAL_OWNER_INFO_COMPLETION",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "DIRECTORS_REPRESENTATIVES_INFO_COMPLETION",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "BUSINESS_RELATIONSHIP_ESTABLISHING_METHOD",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "BUSINESS_SIZE_HIGH_RANK_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "NUMBER_OF_PAYMENT_SUB_CHANNELS",
+      "type": "int",
+      "required": false
+    },
+    {
+      "name": "EXPECTED_SINGLE_TRANSACTION_AMOUNT",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "REGULATORY_REQUEST",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "BEARER_SHARE_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "HAS_EVADED_TAX",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "PUBLIC_COMPANY_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "OFFSHORE_COMPANY_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "KYC_DECLARED_WITHDRAWAL_LIMIT",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "KYC_DECLARED_DEPOSIT_LIMIT",
+      "type": "double",
+      "required": false
+    },
+    {
+      "name": "PAYMENT_FREQUENCY",
+      "type": "int",
+      "required": true
+    },
+    {
+      "name": "PAYMENT_PERIOD",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_AUTHORISED_SIGNATORY_PERSON",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_ACCOUNT_NAME",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_MAILING_ADDRESS",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_BANK_SWIFT_CODE",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_REGISTERED_NUMBER",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_BANK_NAME",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_REGISTERED_BANK_ACCOUNT",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "KYC_UBO_NAME",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "PERIODIC_REVIEW_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "FINANCIAL_INCLUSION_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "SANCTION_FLAG",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "TT_UPDATED_TIME",
+      "type": "timestamp",
+      "required": true,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "TT_CREATED_TIME",
+      "type": "timestamp",
+      "required": false,
+      "format": "%Y-%m-%dT%H:%M:%S.%fZ"
+    },
+    {
+      "name": "TT_IS_DELETED",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "name": "ETL_CUSTOM_COLUMN",
+      "type": "string",
+      "required": false,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "TT_IS_LATEST_DATA",
+      "type": "string",
+      "required": true,
+      "pattern": "^[\\x20-\\x7E\\u0080-\\uFFFF]+$"
+    },
+    {
+      "name": "TT_UPDATED_YEAR_MONTH",
+      "type": "int",
+      "required": true
+    },
+    {
+      "name": "TT_IS_BANK_ENTITY",
+      "allowed_values": [
+        "TRUE",
+        "FALSE"
+      ]
+    }
+  ]
+}
